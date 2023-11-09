@@ -116,6 +116,7 @@ nixpkgs.config.permittedInsecurePackages = [
      joplin-desktop
      neovim
      python311
+     retext
      python311Packages.anyqt
      jetbrains.idea-community
      jetbrains.jdk
