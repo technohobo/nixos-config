@@ -33,6 +33,11 @@
   #   useXkbConfig = true; # use xkbOptions in tty.
   # };
 
+#nixpkgs.config.packageOverrides = self : rec {
+#    blender = self.blender.override {
+#      cudaSupport = true;
+#    };
+#  };
 
 virtualisation.libvirtd.enable = true;
 programs.dconf.enable = true;
@@ -94,11 +99,13 @@ nixpkgs.config.permittedInsecurePackages = [
      wget
      librewolf
      firefox 
+     protonmail-bridge
      krita
      gimp
      kdenlive
      steam
      discord
+     appimage-run
      vscodium
      freetube
      qbittorrent
@@ -119,9 +126,11 @@ nixpkgs.config.permittedInsecurePackages = [
      retext
      python311Packages.anyqt
      jetbrains.idea-community
+     mpv
      jetbrains.jdk
      transmission
      zig
+     hugo
      git
      SDL2
      SDL2_mixer
@@ -130,6 +139,7 @@ nixpkgs.config.permittedInsecurePackages = [
      keepassxc
      wine
      wine64
+     thunderbird
      winetricks
      wireshark
      dxvk
@@ -141,6 +151,7 @@ nixpkgs.config.permittedInsecurePackages = [
      dig
      traceroute
      nmap
+     lm_sensors
      usbutils
      tcpdump
      cron
